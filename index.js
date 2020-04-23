@@ -35,8 +35,13 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(){
+  var name = "Andy";
+  var greeting = ("Goodbye, " + name + ". " + "Have a great day.");
+  return greeting;
+
+  console.log(sayGoodbye());
+
 }
 
 /**
@@ -53,8 +58,13 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF() {
+  var fahrenheit;
+  var celsius = 24;
+  fahrenheit = celsius * 9 / 5 + 32;
+  return fahrenheit;
+
+  console.log(temperatureCtoF());
 }
 
 /**
@@ -74,10 +84,17 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
-}
+function temperatureInF() {
+  var fahrenheit = 88;
+  var celsius = (fahrenheit - 32) * 5 / 9;
+  return fahrenheit;
 
+  var celsius = 24;
+  var fahrenheit = celsius * 9 / 5 + 32
+  return celsius;
+
+  console.log(temperatureInF());
+}
 
 /**
  * ### Challenge `makePersonObject`
@@ -95,8 +112,10 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  return { id, name, email };
+
+  console.log(makePersonObject(5, 'Leia', 'leia@leia.com'));
 }
 
 /**
@@ -112,8 +131,13 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(id, name, email) {
+  id = 1;
+  name = "Leia";
+  email = "leia@leia.com";
+  return "Hello, my name is {name}";
+
+  console.log(getName(1, "Leia", "leia@leia.com"));
 }
 
 
@@ -132,8 +156,12 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex() {
+  var fruits = ['orange', 'grape', 'apple', 'banana', 'mango',];
+  var a = fruits.indexOf("Apple");
+  return appleIndex;
+
+  console.log(fruits.indexOf);
 }
 
 /**
@@ -146,7 +174,7 @@ function appleIndex(/* code here */) {
  * if the corresponding entry in the original array is 'apple' 
  * and `false` if it is anything else.
  * 
- * 
+ *  
  * For example, if we invoke `isItAnApple`
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
